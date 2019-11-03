@@ -58,6 +58,21 @@ RSpec.describe 'the registration page' do
       expect(page).to_not have_css("input[value='example@gmail.com']")
       expect(page).to_not have_css("input[value='password']")
     end
-    
+
+    it "should display an error when password confirmation doesn't match" do
+      visit registration_path
+
+      fill_in :user_first_name, with: "first"
+      fill_in :user_first_name, with: "last"
+
+      fill_in :user_email, with: "example@gmail.com"
+      fill_in :user_password, with: "password"
+      fill_in :user_password_confirmation, with: "a different password"
+
+      click_button "Submit"
+
+      expect(current_path).to eq(registration_path)
+      expect(page).to have_content("Password confirmation doesn't match Password")
+    end
   end
 end
