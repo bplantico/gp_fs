@@ -10,4 +10,10 @@ class ApplicationController < ActionController::Base
     render file: 'public/404', status: 404 unless current_user
   end
 
+  def redirect_user(user)
+    if current_user
+      redirect_to profile_path
+    end
+  end
+
 end

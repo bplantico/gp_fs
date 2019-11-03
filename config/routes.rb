@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   # Authentication Paths
   get '/register', to: 'users#new', as: :registration
   post '/register', to: 'users#create'
+  get '/login', to: 'sessions#new', as: :login
+  post '/login', to: 'sessions#create'
 
   # User Profile Paths
   get '/profile', to: 'users#show', as: :profile
-  
+
 end
