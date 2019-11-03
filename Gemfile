@@ -32,7 +32,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.8'
   gem 'capybara'
   gem 'shoulda-matchers'
-  gem 'factory_bot'
+  gem 'factory_bot_rails'
 end
 
 gem 'simplecov', require: false, group: :test

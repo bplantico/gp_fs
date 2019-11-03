@@ -8,6 +8,7 @@ require File.expand_path('../config/environment', __dir__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'capybara/rspec'
 require 'capybara/rails'
+require 'support/factory_bot'
 require 'simplecov'
 SimpleCov.start
 require 'rspec/rails'
