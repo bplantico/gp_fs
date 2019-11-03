@@ -10,6 +10,8 @@
   </head>
 
   <body>
+    <%= render '/layouts/nav' %>
+
     <div class="container" id="body-content-no-nav">
       <% flash.each do |flash_type, flash_message| %>
         <% if flash_message.class == Array %>

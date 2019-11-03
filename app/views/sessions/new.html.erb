@@ -1,6 +1,6 @@
 <!-- app/views/sessions/new.html.erb -->
 
-<%= form_with url: login_path do |f| %>
+<%= form_with url: login_path, local: true do |f| %>
 
   <%= f.label :email %>:
   <%= f.email_field :email %>
