@@ -1,6 +1,6 @@
 <!-- app/views/users/new.html.erb -->
 
-<%= form_with model: @user, url: registration_path, local: true do |f| %>
+<%= form_with model: @user, url: registration_path do |f| %>
 
   <%= f.label :first_name %>:
   <%= f.text_field :first_name %>
