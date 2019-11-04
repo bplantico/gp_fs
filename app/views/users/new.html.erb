@@ -1,0 +1,21 @@
+<!-- app/views/users/new.html.erb -->
+
+<%= form_with model: @user, url: registration_path, local: true do |f| %>
+
+  <%= f.label :first_name %>:
+  <%= f.text_field :first_name %>
+
+  <%= f.label :last_name %>:
+  <%= f.text_field :last_name %>
+
+  <%= f.label :email %>:
+  <%= f.text_field :email %>
+
+  <%= f.label :password %>:
+  <%= f.password_field :password %>
+
+  <%= f.label "Confirm Password" %>:
+  <%= f.password_field :password_confirmation %>
+
+  <%= f.submit "Submit" %>
+<% end %>

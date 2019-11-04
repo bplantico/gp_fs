@@ -10,6 +10,18 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container" id="body-content-no-nav">
+      <% flash.each do |flash_type, flash_message| %>
+        <% if flash_message.class == Array %>
+          <% flash_message.each do |single_message| %>
+            <div class="alert alert-<%= flash_type %>" role="alert"><%= single_message %></div>
+          <% end %>
+        <% else %>
+          <div class="alert alert-<%= flash_type %>" role="alert"><%= flash_message %></div>
+        <% end %>
+      <% end %>
+
+      <%= yield %>
+    </div>
   </body>
 </html>
