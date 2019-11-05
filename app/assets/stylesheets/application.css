@@ -66,7 +66,88 @@ nav {
   color: darkgreen;
 }
 
-.logo img {
-  width: 175px;
-  vertical-align: middle;
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-form: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.form * {
+  box-sizing: border-box;
+}
+
+.form-outer,
+.form-inner {
+  list-style-type: none;
+  padding: 0;
+}
+
+.form-outer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-outer li,
+.form-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.form-inner {
+  padding: 0 8px;
+  justify-content: space-between;
+}
+
+.form-outer > li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.form-outer li label,
+.form-outer li p {
+  padding: 10px;
+}
+
+.form-outer > li > label,
+.form-outer li p {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+
+.form-outer > li > label + *,
+.form-inner {
+  flex: 1 0 220px;
+}
+
+.form-outer li p {
+  margin: 0;
+}
+
+.form-outer li input:not([type='checkbox']),
+.form-outer li textarea {
+  padding: 1em;
+}
+
+.form-outer li button {
+  margin-left: auto;
+  padding: 8px 16px;
+  background: #333;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-radius: 2px;
+}
+
+.form-inner li {
+  width: 100px;
 }
