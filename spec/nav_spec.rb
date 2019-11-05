@@ -17,7 +17,7 @@ RSpec.describe 'Site Nav', type: :feature do
     click_link 'Register'
     expect(current_path).to eq(registration_path)
 
-    click_link 'Home'
+    click_link 'GardenPi'
     expect(current_path).to eq(root_path)
 
     expect(page).to_not have_link('Log out')
