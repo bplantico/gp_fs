@@ -27,13 +27,21 @@ html {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: url("https://media.istockphoto.com/photos/young-plant-watered-from-a-watering-can-picture-id637580444?k=6&m=637580444&s=612x612&w=0&h=SA3IWKMhjEuGMjqdFnCDfaTYmMsJwFHt27XJkaMjdzU=") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 nav {
   width: 100%;
-  background-color: darkgreen;
-  padding-left: 30px;
-  padding-right: 10px;
+  background-color: royalblue;
+  padding-left: 50px;
+  padding-right: 20px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+
 }
 
 .navbar {
@@ -58,6 +66,13 @@ nav {
   color: white;
 }
 
+.disabled-nav-item a {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+}
+
 .nav-item:hover {
   background-color: white;
 }
@@ -67,23 +82,23 @@ nav {
 }
 
 .form {
+  box-sizing: border-box;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
 
-  width: 80%;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 10px;
+
+  width: 35%;
+  max-width: 200px;
+
+  background-color: tomato;
 
   display: flex;
   flex-form: column nowrap;
   justify-content: center;
   align-items: center;
-}
-
-.form * {
-  box-sizing: border-box;
 }
 
 .form-outer,
@@ -93,8 +108,8 @@ nav {
 }
 
 .form-outer {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: inherit;
+  margin: auto;
 }
 
 .form-outer li,
@@ -102,6 +117,8 @@ nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+  padding: 2px;
 }
 
 .form-inner {
@@ -113,13 +130,7 @@ nav {
   margin-bottom: 20px;
 }
 
-.form-outer li label,
-.form-outer li p {
-  padding: 10px;
-}
-
-.form-outer > li > label,
-.form-outer li p {
+.form-outer > li > label {
   flex: 1 0 120px;
   max-width: 220px;
 }
@@ -133,19 +144,16 @@ nav {
   margin: 0;
 }
 
-.form-outer li input:not([type='checkbox']),
+.form-outer li input,
 .form-outer li textarea {
-  padding: 1em;
+  padding: 1.25em;
 }
 
-.form-outer li button {
+.submit-button {
   margin-left: auto;
-  padding: 8px 16px;
-  background: #333;
+  padding: 5px;
   color: #f2f2f2;
-  text-transform: uppercase;
-  letter-spacing: .09em;
-  border-radius: 2px;
+  letter-spacing: 1em;
 }
 
 .form-inner li {

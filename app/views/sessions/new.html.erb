@@ -1,15 +1,20 @@
 <!-- app/views/sessions/new.html.erb -->
+<div class="form">
+  <ul class="form-outer">
+    <%= form_with url: login_path, local: true do |f| %>
+    <li>
+      <%= f.email_field :email, placeholder: "Email address" %>
+    </li>
 
-<%= form_with url: login_path, local: true do |f| %>
-  <p>
-    <%= f.label :email %>:
-    <%= f.email_field :email %>
-  </p>
+    <li>
+      <%= f.password_field :password, placeholder: "Password" %>
+    </li>
 
-  <p>
-    <%= f.label :password %>:
-    <%= f.password_field :password %>
-  </p>
-
-  <%= f.submit "Log in" %>
-<% end %>
+    <li>
+      <div class="submit-button">
+        <%= f.submit "Log in" %>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+</div>
