@@ -34,6 +34,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'factory_bot_rails'
   gem 'pry'
+  gem 'launchy'
 end
 
 gem 'simplecov', require: false, group: :test

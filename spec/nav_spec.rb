@@ -37,7 +37,7 @@ RSpec.describe 'Site Nav', type: :feature do
     expect(current_path).to eq(profile_path)
 
     click_link 'Gardens'
-    expect(current_path).to eq(profile_gardens_path)
+    expect(current_path).to eq(gardens_path)
 
     click_link 'Log out'
     expect(current_path).to eq(root_path)

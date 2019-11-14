@@ -10,9 +10,9 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy', as: :logout
   
-  # User Profile Paths
+  # User Paths
   get '/profile', to: 'users#show', as: :profile
-  namespace :profile do
-    resources :gardens, only: :index
-  end
+
+  # Garden paths
+  resources :gardens, only: :index
 end

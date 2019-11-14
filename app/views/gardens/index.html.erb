@@ -1,0 +1,10 @@
+<h1> My Gardens </h1>
+  <% @gardens.each do |garden| %>
+    <h3>Name: <%= garden.name %></h3>
+    <ul class="garden-info"> 
+      <li>Latitude: <%= garden.latitude %> </li>
+      <li>Longitude: <%= garden.longitude %> </li>
+      <li>Maximum Moisture: <%= garden.max_moisture %> </li>
+      <li>Minimum Moisture: <%= garden.min_moisture %> </li>
+    </ul>
+  <% end %>
